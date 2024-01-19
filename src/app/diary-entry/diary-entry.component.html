@@ -1,0 +1,13 @@
+<div class="diary-entry">
+    <div class="diary-control">
+        <app-diary-controls direction="left" (click)="handleDiaryControls('left')"
+            [disabled]="disableLeft"></app-diary-controls>
+    </div>
+    <div class="diary-entry-content">
+        <app-diary-content [entry]="entries[selectedDiary]"></app-diary-content>
+    </div>
+    <div class="diary-control">
+        <app-diary-controls direction="right" (click)="handleDiaryControls('right')"
+            [disabled]="disableRight"></app-diary-controls>
+    </div>
+</div>

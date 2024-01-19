@@ -1,0 +1,15 @@
+button {
+  background: transparent;
+  border: 0px;
+}
+
+.diary-control-single {
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+.diary-control-right {
+  transform: rotate(180deg);
+}
