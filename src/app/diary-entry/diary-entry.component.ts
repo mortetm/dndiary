@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DiaryService } from '../shared/diary.service';
 import { DiaryEntry } from './diary.model';
 
@@ -14,10 +14,12 @@ export class DiaryEntryComponent {
   selectedDiary: number;
 
   @Input() refreshNavigation: boolean;
+  @Output() refreshTest = new EventEmitter();
 
   ngOnInit() {
     this.DiaryService.disableControls();
     this.refreshFromService();
+    console.log('init', this.refreshNavigation);
   }
 
   refreshFromService() {
@@ -42,7 +44,9 @@ export class DiaryEntryComponent {
   }
 
   ngOnChanges() {
+    console.log('ngonchange', this.refreshNavigation);
     this.refreshFromService();
     this.DiaryService.disableControls();
+    this.refreshTest.emit();
   }
 }

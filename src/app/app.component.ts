@@ -9,11 +9,11 @@ import { DiaryService } from './shared/diary.service';
 export class AppComponent {
   constructor(private DiaryService: DiaryService) {}
 
-  shouldRefreshNavigation: boolean = false;
+  refreshNavigationSignal: boolean = false;
   campaigns = this.DiaryService.campaigns;
   entries = this.DiaryService.entries;
 
   handleEntrySubmitted() {
-    this.shouldRefreshNavigation = true;
+    this.refreshNavigationSignal = !this.refreshNavigationSignal;
   }
 }

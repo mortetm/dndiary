@@ -18,9 +18,11 @@ export class CreateEntryComponent {
   constructor(private DiaryService: DiaryService) {}
 
   submitNewEntry(id: number, title: string, date: string, content: string) {
-    const newEntry = new DiaryEntry(id, title, date, content);
-    this.DiaryService.entries.push(newEntry);
-    this.DiaryService.disableControls();
-    this.onEntrySubmitted.emit();
+    if (title.length > 0) {
+      const newEntry = new DiaryEntry(id, title, date, content);
+      this.DiaryService.entries.push(newEntry);
+      this.DiaryService.disableControls();
+      this.onEntrySubmitted.emit();
+    }
   }
 }
