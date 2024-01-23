@@ -9,10 +9,15 @@ import { DiaryService } from '../shared/diary.service';
 })
 export class CampaignsListComponent {
   campaigns: CampaignEntry[];
+  showAddEntry: boolean = false;
 
   constructor(public DiaryService: DiaryService) {}
 
   ngOnInit() {
     this.campaigns = this.DiaryService.campaigns;
+  }
+
+  showHideAddEntry() {
+    this.DiaryService.showAddEntryUpdated.emit();
   }
 }

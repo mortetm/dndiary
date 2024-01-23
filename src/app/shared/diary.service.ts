@@ -1,13 +1,25 @@
+import { EventEmitter } from '@angular/core';
 import { CampaignEntry, DiaryEntry } from '../diary-entry/diary.model';
 
 export class DiaryService {
   disableLeft = false;
   disableRight = false;
   selectedDiary = 0;
+  statusUpdated = new EventEmitter();
+  showAddEntryUpdated = new EventEmitter();
 
   campaigns = [
-    new CampaignEntry(1, 'RotFM', 'IBM Rime of the Frostmaiden Campaign'),
-    new CampaignEntry(2, 'Calimshan'),
+    new CampaignEntry(
+      1,
+      'RotFM',
+      'https://deow9bq0xqvbj.cloudfront.net/ep-logo/pbblog3898325/PodcastLogo_300x300.png',
+      'IBM Rime of the Frostmaiden Campaign'
+    ),
+    new CampaignEntry(
+      2,
+      'Calimshan',
+      'https://www.traveloffpath.com/wp-content/uploads/2021/08/Oman-Desert-300x300.jpg'
+    ),
   ];
   entries = [
     new DiaryEntry(

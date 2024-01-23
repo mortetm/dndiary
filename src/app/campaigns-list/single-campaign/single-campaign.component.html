@@ -1,2 +1,8 @@
-<span class="single-campaign"><a href="/campaign/{{campaign.campaignId}}-{{campaign.campaignName}}/">{{
-                campaign.campaignName }}</a></span>
+<span class="single-campaign">
+    <a href="/campaign/{{campaign.campaignId}}-{{campaign.campaignName}}/">
+        <img [src]="campaign.imageUrl" class="campaign-icon" />
+        <span>
+            {{campaign.campaignName }}
+        </span>
+    </a>
+</span>

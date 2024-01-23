@@ -1,4 +1,14 @@
 .campaign-list {
   display: flex;
+  justify-content: space-between;
+}
+
+.campaigns {
+  display: flex;
   gap: 2rem;
+}
+
+.add-entry {
+  align-self: flex-end;
+  justify-self: right;
 }

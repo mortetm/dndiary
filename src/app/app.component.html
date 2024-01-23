@@ -1,5 +1,4 @@
-<h1>Diary App</h1>
-<app-create-entry (onEntrySubmitted)="handleEntrySubmitted()"></app-create-entry>
 <app-campaigns-list></app-campaigns-list>
 <hr>
-<app-diary-entry [refreshNavigation]="refreshNavigationSignal"></app-diary-entry>
+<app-diary-entry *ngIf="!showAddEntry"></app-diary-entry>
+<app-create-entry *ngIf="showAddEntry"></app-create-entry>

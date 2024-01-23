@@ -87,3 +87,15 @@ select {
 h1 {
   font-size: 2.8rem;
 }
+
+/* VARIABLES */
+
+:root {
+  --color-main: #a00b0b;
+}
+
+/* STYLES */
+
+body {
+  background-image: url("https://img.freepik.com/premium-photo/old-paper-texture-seamless-pattern-vintage-background_434420-544.jpg");
+}

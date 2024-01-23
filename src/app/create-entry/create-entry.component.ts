@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { DiaryService } from '../shared/diary.service';
 import { CampaignEntry, DiaryEntry } from '../diary-entry/diary.model';
 
@@ -9,7 +9,6 @@ import { CampaignEntry, DiaryEntry } from '../diary-entry/diary.model';
 })
 export class CreateEntryComponent {
   campaigns: CampaignEntry[];
-  @Output() onEntrySubmitted = new EventEmitter();
 
   ngOnInit() {
     this.campaigns = this.DiaryService.campaigns;
@@ -22,7 +21,7 @@ export class CreateEntryComponent {
       const newEntry = new DiaryEntry(id, title, date, content);
       this.DiaryService.entries.push(newEntry);
       this.DiaryService.disableControls();
-      this.onEntrySubmitted.emit();
+      this.DiaryService.statusUpdated.emit();
     }
   }
 }

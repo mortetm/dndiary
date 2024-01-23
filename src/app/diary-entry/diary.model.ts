@@ -11,6 +11,7 @@ export class CampaignEntry {
   constructor(
     public campaignId: number,
     public campaignName: string,
+    public imageUrl: string,
     public campaignDescription?: string
   ) {}
 }

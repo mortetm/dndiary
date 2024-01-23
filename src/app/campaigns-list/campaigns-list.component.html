@@ -1,4 +1,7 @@
 <div class="campaign-list">
-    <app-single-campaign *ngFor="let campaign of campaigns"
-        [campaign]="campaign">{{campaign.campaignName}}</app-single-campaign>
+    <div class="campaigns">
+        <app-single-campaign *ngFor="let campaign of campaigns"
+            [campaign]="campaign">{{campaign.campaignName}}</app-single-campaign>
+    </div>
+    <button class="add-entry" (click)="showHideAddEntry()">+</button>
 </div>

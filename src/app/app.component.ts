@@ -7,13 +7,14 @@ import { DiaryService } from './shared/diary.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  constructor(private DiaryService: DiaryService) {}
+  constructor(private DiaryService: DiaryService) {
+    this.DiaryService.showAddEntryUpdated.subscribe(() => {
+      this.showAddEntry = !this.showAddEntry;
+      console.log('test');
+    });
+  }
 
-  refreshNavigationSignal: boolean = false;
   campaigns = this.DiaryService.campaigns;
   entries = this.DiaryService.entries;
-
-  handleEntrySubmitted() {
-    this.refreshNavigationSignal = !this.refreshNavigationSignal;
-  }
+  showAddEntry = false;
 }
