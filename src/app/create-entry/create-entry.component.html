@@ -1,21 +1,21 @@
 <div class="add-diary">
     <div>
-        <label for="campaign">Choose a campaign:</label>
+        <label for="campaign">Campaign:</label><br>
         <select id="campaign" name="campaign" #campaignId>
             <option *ngFor="let campaign of campaigns" value="campaign.campaignId">{{campaign.campaignName}}</option>
         </select>
     </div>
     <div>
-        <label for="title">Title:</label>
-        <input type="text" id="title" #campaignTitle />
+        <!-- <label for="title">Title:</label> -->
+        <input type="text" id="title" #campaignTitle placeholder="Entry Title" />
     </div>
     <div>
-        <label for="date">Date:</label>
-        <input type="text" id="date" #campaignDate />
+        <!-- <label for="date">Date:</label> -->
+        <input type="text" id="date" #campaignDate placeholder="Entry Date" />
     </div>
     <div>
-        <label for="content">Content:</label>
-        <textarea type="text" id="content" #campaignContent></textarea>
+        <label for="content">Content:</label><br>
+        <textarea type="text" id="content" #campaignContent rows="20" cols="60"></textarea>
     </div>
     <button class="btn btn-primary"
         (click)="submitNewEntry(campaignId.value, campaignTitle.value, campaignDate.value, campaignContent.value)">Submit</button>

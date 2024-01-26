@@ -1,3 +1,20 @@
+@keyframes slideover {
+  0% {
+    top: 1rem;
+    z-index: 0;
+  }
+
+  30% {
+    top: -15rem;
+    z-index: 0;
+  }
+
+  100% {
+    top: 1rem;
+    z-index: 99;
+  }
+}
+
 .campaign-list {
   display: flex;
   justify-content: space-between;
@@ -6,9 +23,29 @@
 .campaigns {
   display: flex;
   gap: 2rem;
+  background-image: url("https://img.freepik.com/premium-photo/old-paper-texture-seamless-pattern-vintage-background_434420-544.jpg");
+  transform: rotate(2deg);
+  border: 2px solid black;
+  padding: 3rem 4rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%) rotate(3deg);
+}
+
+.campaigns:hover {
+  z-index: 99;
+  animation: slideover 1s;
 }
 
 .add-entry {
   align-self: flex-end;
   justify-self: right;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/2633/2633006.png");
+  background-color: transparent;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  border: 0px;
+  cursor: pointer;
 }

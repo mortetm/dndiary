@@ -1,5 +1,11 @@
 .campaign-icon {
-  max-width: 120px;
+  max-height: 120px;
+}
+
+.single-campaign span {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
 }
 
 .single-campaign a {

@@ -12,14 +12,10 @@ export class DiaryService {
     new CampaignEntry(
       1,
       'RotFM',
-      'https://deow9bq0xqvbj.cloudfront.net/ep-logo/pbblog3898325/PodcastLogo_300x300.png',
+      '/assets/auril.png',
       'IBM Rime of the Frostmaiden Campaign'
     ),
-    new CampaignEntry(
-      2,
-      'Calimshan',
-      'https://www.traveloffpath.com/wp-content/uploads/2021/08/Oman-Desert-300x300.jpg'
-    ),
+    new CampaignEntry(2, 'Calimshan', 'assets/kossuth.png'),
   ];
   entries = [
     new DiaryEntry(
@@ -61,5 +57,9 @@ export class DiaryService {
       diary.content
     );
     this.entries.push(newDiary);
+  }
+
+  jumpToLastEntry() {
+    this.selectedDiary = this.entries.length - 1;
   }
 }

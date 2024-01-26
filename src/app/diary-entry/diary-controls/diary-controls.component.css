@@ -8,8 +8,37 @@ button {
   cursor: pointer;
   padding: 1rem;
   line-height: 2rem;
+
+  height: 78vh;
+  background-image: url("https://img.freepik.com/premium-photo/old-paper-texture-seamless-pattern-vintage-background_434420-544.jpg");
+  transform: rotate(2deg);
+  margin-top: 3rem;
+  margin-right: -7rem;
+  margin-left: -7rem;
+  width: 16rem;
+  z-index: -10;
+  border: 2px solid black;
+  transition: opacity 0.2s ease-out, transform 1s;
+}
+
+.diary-control-single:disabled {
+  opacity: 0;
+}
+
+.diary-control-left {
+  box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
 }
 
 .diary-control-right {
-  transform: rotate(180deg);
+  transform: rotate(174deg);
+  margin-top: -3rem;
+  box-shadow: -10px -10px 15px -6px rgba(0, 0, 0, 0.75);
+}
+
+.diary-control-left:hover {
+  transform: rotate(1deg);
+}
+
+.diary-control-right:hover {
+  transform: rotate(173deg);
 }

@@ -97,5 +97,7 @@ h1 {
 /* STYLES */
 
 body {
-  background-image: url("https://img.freepik.com/premium-photo/old-paper-texture-seamless-pattern-vintage-background_434420-544.jpg");
+  background-color: brown;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
 }

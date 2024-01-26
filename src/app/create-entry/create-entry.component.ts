@@ -22,6 +22,8 @@ export class CreateEntryComponent {
       this.DiaryService.entries.push(newEntry);
       this.DiaryService.disableControls();
       this.DiaryService.statusUpdated.emit();
+      this.DiaryService.showAddEntryUpdated.emit();
+      this.DiaryService.jumpToLastEntry();
     }
   }
 }

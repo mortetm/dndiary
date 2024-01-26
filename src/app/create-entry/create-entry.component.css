@@ -1,0 +1,17 @@
+.add-diary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("https://img.freepik.com/premium-photo/old-paper-texture-seamless-pattern-vintage-background_434420-544.jpg");
+  padding: 2rem;
+  border: 2px solid black;
+}

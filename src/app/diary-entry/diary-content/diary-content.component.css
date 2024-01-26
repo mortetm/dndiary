@@ -1,5 +1,57 @@
 .diary-content {
-  border: 1px solid black;
+  transform: rotate(-2deg);
+  border: 2px solid black;
   padding: 1rem;
-  min-height: 800px;
+  height: 100vh;
+  max-height: 80vh;
+  overflow-y: scroll;
+  background-image: url("https://img.freepik.com/premium-photo/old-paper-texture-seamless-pattern-vintage-background_434420-544.jpg");
+  z-index: 10;
+  position: relative;
+  box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
+  transition: transform 1s;
+}
+
+.diary-content:hover {
+  transform: rotate(-3deg);
+}
+
+.diary-content__single {
+  padding: 2rem 4rem;
+}
+
+.diary-content__single-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.diary-content__single-date {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
 }

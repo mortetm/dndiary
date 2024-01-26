@@ -1,8 +1,9 @@
 .diary-entry {
   display: flex;
-  margin: 0 auto;
+  margin: 4rem auto 0 auto;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .diary-entry-content {
